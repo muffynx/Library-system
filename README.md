@@ -1,58 +1,9 @@
 # Library-system
-ระบบโดยรวมสำหรับผู้ที่มาใช้งาน มีทั้ง ค้นหาหนังสือ รายชื่อหนังสือ ประวัติการยืม และการอัปเดทหนังสือ ในห้องสมุดของเรา 
+#ระบบโดยรวมสำหรับผู้ที่มาใช้งาน มีทั้ง ค้นหาหนังสือ รายชื่อหนังสือ ประวัติการยืม และการอัปเดทหนังสือ ในห้องสมุดของเรา 
 ##ผู้เขียน Name : ณัฐดนัย ภาคภูมิ ID : 653450088-3 E-mail :Natdanai.pa@kkumail.com
 
 
-using information hiding, Encapsulation, Inheritance
----
-title: Animal example
----
-classDiagram
-   
-    Member <|-- Librarian
-    note for Librarian "add book ,Inheritance name, id"
-    Guest <|-- Member
-  
-    Guest : +id name
-    Guest : protec String name
-    Guest: +Guest()
-    Guest: +ViewCatalog()
-    class Librarian{
-        +AddBook()
-        +Librarian()
-       
-    }
-    class Member{
-        -list borrowedBooks
-        +BorrowBook()
-        +Member()
-        +ReturnBook()
-    }
-    class Program{
-    
-        -main()
-    }
-       class Book{
-        -titlepri
-        -authorpri
-        -numberpri
-        Author
-        Available
-        Number
-        Title
-        +book()
-    }
-       class Library{
-    
-        -books
-        -members
-        +Addbook()
-        +AddMember()
-        +GetAvailableBooks()
-        +GetBooks()
-        +GetMembers()
-        +Library()
+#using information hiding, Encapsulation, Inheritance
+[[![](https://mermaid.ink/svg/pako:eNptk19rwjAQwL9KyNOG9guUvegGMphjzLGnwrg2pwbbRC7ppDi_-_JHa1rtQ5v-7v9d7sgrLZDnPMuyQllpa8wZe5MlAXU_pjMWm0IFYVWDMS8SNgQOMcbCiy2xKZHY01-Wne0kqChS2iJba7pyVnAQgpVa79j0VW2RpAVVIVPQ4JRJUfBoumjR2Og0BvA4FeVsIkUwG9I9uaAVW1mSajOWO6PwfXgcwm-Jh2ewUOvNRRSqvSZ-jNQ_k5kQc1fARTOwXjGh8XBK_cVaEmdZLV3apSbSBwxuTeJ1HvhNsOhlgD7RtqRSzUHcD9J-bOfASfgGpBpZ9EbeW5pquB17kgmC1m41DZlqfXYDNgtqyf8vyBrKGq_ovb1MOT5fPlhSYHlb2mhK3W115bCfWRMaZ4azLMftdexOhxdo-7TDnMbSuzA6MnfuSudZofqK-JQ3SG4ewm1jKKXgdovu_vLcHQXQzi_Hyem5rutVpyqeW2pxytu9AIvn1eT5GmrjKAppNS3jeoctP_0D9OUoTg)
 
-
-    }
-
+[[![](https://cdn.discordapp.com/attachments/634554720945438750/1093257928066207784/image.png)
