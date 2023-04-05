@@ -178,7 +178,7 @@ namespace library_system
                     }
 
                 }
-                else if (input == "7")
+                else if (input == "8")
                 {
                     Console.WriteLine("\nGoodbye!");
                     Thread.Sleep(2000);
