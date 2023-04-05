@@ -1,19 +1,19 @@
 # Library-system
-ระบบโดยรวมสำหรับผู้ที่มาใช้งาน มีทั้ง ค้นหาหนังสือ รายชื่อหนังสือ ประวัติการยืม และการอัปเดทหนังสือ ในห้องสมุดของเรา 
+#ระบบโดยรวมสำหรับผู้ที่มาใช้งาน มีทั้ง ค้นหาหนังสือ รายชื่อหนังสือ ประวัติการยืม และการอัปเดทหนังสือ ในห้องสมุดของเรา 
 ##ผู้เขียน Name : ณัฐดนัย ภาคภูมิ ID : 653450088-3 E-mail :Natdanai.pa@kkumail.com
 
 
-using information hiding, Encapsulation, Inheritance
+#using information hiding, Encapsulation, Inheritance
 ---
 title: Animal example
 ---
 classDiagram
    
-    Member <|-- Librarian
+Member <|-- Librarian
     note for Librarian "add book ,Inheritance name, id"
     Guest <|-- Member
   
-    Guest : +id name
+ Guest : +id name
     Guest : protec String name
     Guest: +Guest()
     Guest: +ViewCatalog()
@@ -21,8 +21,8 @@ classDiagram
         +AddBook()
         +Librarian()
        
-    }
-    class Member{
+   }
+   class Member{
         -list borrowedBooks
         +BorrowBook()
         +Member()
@@ -30,8 +30,8 @@ classDiagram
     }
     class Program{
     
-        -main()
-    }
+       -main()
+   }
        class Book{
         -titlepri
         -authorpri
@@ -42,10 +42,10 @@ classDiagram
         Title
         +book()
     }
-       class Library{
+      class Library{
     
-        -books
-        -members
+   -books
+    -members
         +Addbook()
         +AddMember()
         +GetAvailableBooks()
@@ -54,5 +54,5 @@ classDiagram
         +Library()
 
 
-    }
+  }
 
