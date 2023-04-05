@@ -27,13 +27,14 @@ namespace library_system
 
 
                                            _________________ COMMAND __________________
-                                         |  [1] : Show all books in the library       |
-                                         |  [2] : Shows all members of the library    |
-                                         |  [3] : Show the books available            |
-                                         |  [4] : Library member action               |
-				         |  [5] : Librarian update books                   |
-                                         |  [6] : Show the books available            |
-                                         |  [7] : exit the program.            	      |
+                                         |  [1] : What you looking for                |
+                                         |  [2] : Show all books in the library       |
+                                         |  [3] : Shows all members of the library    |
+                                         |  [4] : Show the books available            |
+                                         |  [5] : Library member action               |
+				         |  [6] : Librarian update books                   |
+                                         |  [7] : Show the books available            |
+                                         |  [8] : exit the program.            	      |
                                          |____________________________________________|
 
                                                                             
@@ -43,8 +44,8 @@ namespace library_system
 
             Library library = new Library();
 
-            Book book1 = new Book("C Programming", "Brian W", "978-0131103627");
-            Book book2 = new Book("Python Programming ", "Brain W2", "0131103627");
+            Book book1 = new Book("C Programming", "xxx", "978-0131103627");
+            Book book2 = new Book("Python Programming", "xxx", "0131103627");
 
 
             library.AddBook(book1);
@@ -62,8 +63,9 @@ namespace library_system
 
 
             // สร้างหนังสือ
-            Book book3 = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling, Mary GrandPré", "978-0439708180");
-
+            Book book3 = new Book("Harry Potter and the Sorcerer's Stone", "xx", "978-0439708180");
+            Book book4 = new Book("The Ickabog", "J.K. Rowling", "978-1338732870");
+            Book book5 = new Book("Harryxxx Potter and the Sorcerer's Stone", "xx", "978-0439708180");
             // สร้างบรรณารักษ์
             Librarian librarian = new Librarian("Ashley Graham", "789");
 
@@ -83,7 +85,34 @@ namespace library_system
 
                 if (input == "1")
                 {
+                    Console.Write("Enter the title or author of the book you are looking for:");
+                    string searchTitle = Console.ReadLine();
 
+                    bool foundMatch = false;
+
+                    foreach (Book book in library.GetBooks())
+                    {
+                        if (book.Title.ToLower() == searchTitle.ToLower() || book.Author.ToLower() == searchTitle.ToLower())
+                        {
+                            Console.WriteLine($"{book.Title} by {book.Author} (ISBN-13: {book.Number})");
+                            foundMatch = true;
+                        }
+                    }
+
+                    if (!foundMatch)
+                    {
+                        Console.WriteLine("No matching books found.");
+                    }
+
+
+                    Console.WriteLine("End of search.");
+
+
+                   
+                 
+                }
+                else if (input == "2")
+                {
 
                     Console.WriteLine("\nBooks:");
                     foreach (Book book in library.GetBooks())
@@ -93,7 +122,7 @@ namespace library_system
 
 
                 }
-                else if (input == "2")
+                else if (input == "3")
                 {
 
                     //แสดงสมาชิกทั้งหมดในห้องสมุด
@@ -134,6 +163,8 @@ namespace library_system
                 {
                     Console.WriteLine();
                     librarian.AddBook(book3, library);
+                    librarian.AddBook(book4,library);
+                    librarian.AddBook(book5,library);
 
                 }
                 else if (input == "6")
