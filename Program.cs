@@ -13,7 +13,7 @@ namespace library_system
         static void Main(string[] args)
         {
 
-            Console.Title = "ASCII Art";
+            Console.Title = "Library_system";
             string titleshow = @"                                   
         
                                                                                    make by discord: muffyn #9990
@@ -30,8 +30,8 @@ namespace library_system
                                          |  [1] : Show all books in the library       |
                                          |  [2] : Shows all members of the library    |
                                          |  [3] : Show the books available            |
-                                         |  [4] : Library member history              |
-				         |  [5] : Librarian history                   |
+                                         |  [4] : Library member action               |
+				         |  [5] : Librarian update books                   |
                                          |  [6] : Show the books available            |
                                          |  [7] : exit the program.            	      |
                                          |____________________________________________|
@@ -85,7 +85,7 @@ namespace library_system
                 {
 
 
-                    
+                    Console.WriteLine("\nBooks:");
                     foreach (Book book in library.GetBooks())
                     {
                         Console.WriteLine($"{book.Title} by {book.Author} (ISBN-13 : {book.Number}) .");
@@ -97,7 +97,7 @@ namespace library_system
                 {
 
                     //แสดงสมาชิกทั้งหมดในห้องสมุด
-                    
+                    Console.WriteLine("\nMembers:");
                     foreach (Member member in library.GetMembers())
                     {
                         Console.WriteLine($"{member.Id} : {member.Name}");
@@ -109,7 +109,7 @@ namespace library_system
                 {
 
                     // แสดงหนังสือที่มีให้ยืมในห้องสมุด
-                    
+                    Console.WriteLine("\nAvailableBooks:");
                     foreach (Book book in library.GetAvailableBooks())
                     {
                         Console.WriteLine($"{book.Title} by {book.Author} (ISBN-13 : {book.Number}) .");
@@ -127,7 +127,7 @@ namespace library_system
                     member1.BorrowBook(book1);
                     //สมาชิกคืนหนังสือ
                     Console.WriteLine();
-                    member2.ReturnBook(book2);
+                    member1.ReturnBook(book1);
 
                 }
                 else if (input == "5")
@@ -151,7 +151,7 @@ namespace library_system
                     Thread.Sleep(2000);
                     
                     
-                    break; // Exit the loop and end the program
+                    break; 
                 }
 
                 else
@@ -165,48 +165,9 @@ namespace library_system
                 
 
             }
-
-
-
-
-
-
-
-
-
         }
 
-      
-
-          
-
-
-            // แสดงหนังสือทั้งหมดในห้องสมุด
-           
-        
-
-
-
-     
-           
-
-            
-
-
-               
-
-
-
-                 
-           
-
-            //        // บรรณารักษ์เพิ่มหนังสือเข้าห้องสมุด
-           
-
-
-           
-          
-
+ 
             }
 
     }

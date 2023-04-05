@@ -18,10 +18,6 @@ namespace library_system.class_Person
             library.AddBook(book);
             Console.WriteLine($"{name} added {book.Title} by {book.Author} to the library.");
         }
-        public void UpdateBook(Book book, string[] newInfo)
-        {
-            book.Update(newInfo);
-            Console.WriteLine($"{name} updated {book.Title} by {book.Author} with new information.");
-        }
+      
     }
 }

@@ -21,26 +21,26 @@
       <FileName>class_Person\Member.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="library_system.class_Person.Librarian" Collapsed="true">
+  <Class Name="library_system.class_Person.Librarian">
     <Position X="4.5" Y="3.75" Width="1.5" />
     <InheritanceLine Type="library_system.class_Person.Member" ManuallyRouted="true" FixedToPoint="true">
       <Path>
         <Point X="5.25" Y="2.819" />
         <Point X="5.25" Y="3.194" />
         <Point X="4.125" Y="3.194" />
-        <Point X="4.125" Y="3.812" />
-        <Point X="4.5" Y="3.812" />
+        <Point X="4.125" Y="3.879" />
+        <Point X="4.5" Y="3.879" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>BAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>class_Person\Librarian.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="library_system.class_Library.Book">
     <Position X="7.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQCAAAAAAAAAEAAgEAAEABAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAEAAgEAAEABAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>class_Library\book.cs</FileName>
     </TypeIdentifier>
   </Class>

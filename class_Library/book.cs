@@ -20,12 +20,7 @@ namespace library_system.class_Library
             this.numberpri = numberpri;
             available = true;
         }
-        public void Update(string[] newInfo)
-        {
-            titlepri = newInfo[0];
-            authorpri = newInfo[1];
-            numberpri = newInfo[2];
-        }
+    
         public string Title
         {
             get { return titlepri; }
