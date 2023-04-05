@@ -32,7 +32,7 @@ namespace library_system
                                          |  [3] : Shows all members of the library    |
                                          |  [4] : Show the books available            |
                                          |  [5] : Library member action               |
-				         |  [6] : Librarian update books                   |
+				         |  [6] : Librarian update books              |
                                          |  [7] : Show the books available            |
                                          |  [8] : exit the program.            	      |
                                          |____________________________________________|
@@ -44,8 +44,8 @@ namespace library_system
 
             Library library = new Library();
 
-            Book book1 = new Book("C Programming", "xxx", "978-0131103627");
-            Book book2 = new Book("Python Programming", "xxx", "0131103627");
+            Book book1 = new Book("C Programming", "Brian Kernighan", "978-0131103627");
+            Book book2 = new Book("Python Programming", "David Beazley", "0131103627");
 
 
             library.AddBook(book1);
@@ -63,11 +63,11 @@ namespace library_system
 
 
             // สร้างหนังสือ
-            Book book3 = new Book("Harry Potter and the Sorcerer's Stone", "xx", "978-0439708180");
+            Book book3 = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "978-0439708180");
             Book book4 = new Book("The Ickabog", "J.K. Rowling", "978-1338732870");
-            Book book5 = new Book("Harryxxx Potter and the Sorcerer's Stone", "xx", "978-0439708180");
+   
             // สร้างบรรณารักษ์
-            Librarian librarian = new Librarian("Ashley Graham", "789");
+            Librarian librarian1 = new Librarian("Ashley Graham", "789");
 
 
 
@@ -85,7 +85,7 @@ namespace library_system
 
                 if (input == "1")
                 {
-                    Console.Write("Enter the title or author of the book you are looking for:");
+                    Console.Write("Enter the title or author: ");
                     string searchTitle = Console.ReadLine();
 
                     bool foundMatch = false;
@@ -94,18 +94,20 @@ namespace library_system
                     {
                         if (book.Title.ToLower() == searchTitle.ToLower() || book.Author.ToLower() == searchTitle.ToLower())
                         {
+                            
                             Console.WriteLine($"{book.Title} by {book.Author} (ISBN-13: {book.Number})");
                             foundMatch = true;
                         }
+                       
                     }
 
                     if (!foundMatch)
                     {
                         Console.WriteLine("No matching books found.");
                     }
+                    Console.WriteLine();
 
-
-                    Console.WriteLine("End of search.");
+                    Console.WriteLine("\nEnd of search.");
 
 
                    
@@ -134,7 +136,7 @@ namespace library_system
 
 
                 }
-                else if (input == "3")
+                else if (input == "4")
                 {
 
                     // แสดงหนังสือที่มีให้ยืมในห้องสมุด
@@ -144,11 +146,11 @@ namespace library_system
                         Console.WriteLine($"{book.Title} by {book.Author} (ISBN-13 : {book.Number}) .");
                     }
                 }
-                else if (input == "4")
+                else if (input == "5")
                 {
                     // สมาชิกไม่ได้เอาหนังสือไป
                     Console.WriteLine();
-                    member1.ReturnBook(book1);
+                  //  member1.ReturnBook(book1);
 
 
                     // สมาชิกยืมหนังสือ
@@ -156,18 +158,18 @@ namespace library_system
                     member1.BorrowBook(book1);
                     //สมาชิกคืนหนังสือ
                     Console.WriteLine();
-                    member1.ReturnBook(book1);
-
-                }
-                else if (input == "5")
-                {
-                    Console.WriteLine();
-                    librarian.AddBook(book3, library);
-                    librarian.AddBook(book4,library);
-                    librarian.AddBook(book5,library);
+                  //  member1.ReturnBook(book1);
 
                 }
                 else if (input == "6")
+                {
+                    Console.WriteLine();
+                    librarian1.AddBook(book3, library);
+                    librarian1.AddBook(book4,library);
+                  
+
+                }
+                else if (input == "7")
                 {
                     //        // แสดงหนังสือทั้งหมดในห้องสมุด
                     foreach (Book book in library.GetBooks())
