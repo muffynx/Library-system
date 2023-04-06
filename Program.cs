@@ -33,8 +33,7 @@ namespace library_system
                                          |  [4] : Show the books available            |
                                          |  [5] : Library member action               |
 				         |  [6] : Librarian update books              |
-                                         |  [7] : Show the books available            |
-                                         |  [8] : exit the program.            	      |
+                                         |  [7] : exit the program.            	      |
                                          |____________________________________________|
 
                                                                             
@@ -45,7 +44,7 @@ namespace library_system
             Library library = new Library();
 
             Book book1 = new Book("C Programming", "Brian Kernighan", "978-0131103627");
-            Book book2 = new Book("Python Programming", "David Beazley", "0131103627");
+            Book book2 = new Book("Python Programming", "David Beazley", "978-1914045110");
 
 
             library.AddBook(book1);
@@ -56,13 +55,14 @@ namespace library_system
             //สมาชิก กี่คน
             Member member1 = new Member("Jack", "11");
             Member member2 = new Member("Pound", "22");
+        
 
             // เพิ่มสมาชิกเข้าห้องสมุด
             library.AddMember(member1);
             library.AddMember(member2);
 
 
-            // สร้างหนังสือ
+            // เพิ่มหนังสือ
             Book book3 = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "978-0439708180");
             Book book4 = new Book("The Ickabog", "J.K. Rowling", "978-1338732870");
    
@@ -85,7 +85,7 @@ namespace library_system
 
                 if (input == "1")
                 {
-                    Console.Write("Enter the title or author: ");
+                    Console.Write("\nEnter the title or author: ");
                     string searchTitle = Console.ReadLine();
 
                     bool foundMatch = false;
@@ -96,7 +96,7 @@ namespace library_system
                         {
                             
                             Console.WriteLine($"{book.Title} by {book.Author} (ISBN-13: {book.Number})");
-                            foundMatch = true;
+                            foundMatch = true; //เอาจน lloop หทด
                         }
                        
                     }
@@ -116,8 +116,8 @@ namespace library_system
                 else if (input == "2")
                 {
 
-                    Console.WriteLine("\nBooks:");
-                    foreach (Book book in library.GetBooks())
+                    Console.WriteLine("Show all books in the library.");
+                    foreach (Book book in library.GetBooks()) //book เอามาใช้
                     {
                         Console.WriteLine($"{book.Title} by {book.Author} (ISBN-13 : {book.Number}) .");
                     }
@@ -133,6 +133,8 @@ namespace library_system
                     {
                         Console.WriteLine($"{member.Id} : {member.Name}");
                     }
+                   
+                    
 
 
                 }
@@ -156,6 +158,7 @@ namespace library_system
                     // สมาชิกยืมหนังสือ
                     Console.WriteLine();
                     member1.BorrowBook(book1);
+                    member2.BorrowBook(book2);
                     //สมาชิกคืนหนังสือ
                     Console.WriteLine();
                   //  member1.ReturnBook(book1);
@@ -171,21 +174,14 @@ namespace library_system
                 }
                 else if (input == "7")
                 {
-                    //        // แสดงหนังสือทั้งหมดในห้องสมุด
-                    foreach (Book book in library.GetBooks())
-                    {
-                        Console.WriteLine($"{book.Title} by {book.Author} (ISBN-13 : {book.Number}) .");
-                    }
-
-                }
-                else if (input == "8")
-                {
                     Console.WriteLine("\nGoodbye!");
                     Thread.Sleep(2000);
-                    
-                    
-                    break; 
+
+
+                    break;
+
                 }
+            
 
                 else
                 {
@@ -193,6 +189,8 @@ namespace library_system
                 }
 
                 Console.WriteLine("\nPress any key to HomePage...");
+        
+
                 Console.ReadKey(true);
           
                 

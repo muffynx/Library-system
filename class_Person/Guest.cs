@@ -10,15 +10,15 @@ namespace library_system.class_Person
     {
         protected string name;
         private string id;
-                                           //สร้าง ตัวแปรเพื่อใช้งาน
-        public Guest(string name, string id)
+                                           
+        public Guest(string name, string id)  
         {
             this.name=name;
             this.id=id;
         }
         public string Name
         {
-            get { return name; }
+            get { return name; } // encap
         }
         public string Id
         {
@@ -26,9 +26,5 @@ namespace library_system.class_Person
         }
        
 
-        public void ViewCatalog()
-        {
-            Console.WriteLine("Viewing Library Catalog");
-        }
     }
 }

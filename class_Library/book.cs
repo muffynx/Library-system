@@ -11,17 +11,17 @@ namespace library_system.class_Library
         private string titlepri;
         private string authorpri;
         private string numberpri;
-        private bool available;
+        private bool available;   
 
-        public Book(string titlepri, string authorpri, string numberpri)
+        public Book(string title, string author, string number) 
         {
-            this.titlepri = titlepri;
-            this.authorpri = authorpri;
-            this.numberpri = numberpri;
+            this.titlepri = title;
+            this.authorpri = author;
+            this.numberpri = number;
             available = true;
         }
-    
-        public string Title
+
+        public string Title    
         {
             get { return titlepri; }
         }

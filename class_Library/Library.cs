@@ -12,7 +12,7 @@ namespace library_system.class_Library
 
     public class Library
     {
-        private List<Book> books;
+        private List<Book> books; //books = list
         private List<Member> members;
 
         public Library()
@@ -41,8 +41,15 @@ namespace library_system.class_Library
                     availableBooks.Add(book);
                 }
             }
+
+            if (availableBooks.Count == 0)
+            {
+                Console.WriteLine("There are no available books.");
+            }
+
             return availableBooks;
         }
+
         public void AddMember(Member member)
         {
            members.Add(member);
