@@ -115,7 +115,9 @@ namespace library_system
                 }
                 else if (input == "2")
                 {
-
+                    int bookCount = library.GetBooks().Count;
+                    Console.WriteLine($"Total number of books: {bookCount}");
+                    Console.WriteLine();
                     Console.WriteLine("Show all books in the library.");
                     foreach (Book book in library.GetBooks()) //book เอามาใช้
                     {
@@ -127,8 +129,11 @@ namespace library_system
                 else if (input == "3")
                 {
 
+                    int memberCount = library.GetMembers().Count;
+                    Console.WriteLine($"Total number of members: {memberCount}");
                     //แสดงสมาชิกทั้งหมดในห้องสมุด
                     Console.WriteLine("\nMembers:");
+                  
                     foreach (Member member in library.GetMembers())
                     {
                         Console.WriteLine($"{member.Id} : {member.Name}");
