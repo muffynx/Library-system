@@ -61,13 +61,14 @@ namespace library_system
             library.AddMember(member1);
             library.AddMember(member2);
 
+            // สร้างบรรณารักษ์
 
+            Librarian librarian1 = new Librarian("Ashley Graham", "789");
             // เพิ่มหนังสือ
             Book book3 = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "978-0439708180");
             Book book4 = new Book("The Ickabog", "J.K. Rowling", "978-1338732870");
    
-            // สร้างบรรณารักษ์
-            Librarian librarian1 = new Librarian("Ashley Graham", "789");
+          
 
 
 
@@ -118,6 +119,9 @@ namespace library_system
                     int bookCount = library.GetBooks().Count;
                     Console.WriteLine($"Total number of books: {bookCount}");
                     Console.WriteLine();
+
+
+
                     Console.WriteLine("Show all books in the library.");
                     foreach (Book book in library.GetBooks()) //book เอามาใช้
                     {
@@ -131,6 +135,9 @@ namespace library_system
 
                     int memberCount = library.GetMembers().Count;
                     Console.WriteLine($"Total number of members: {memberCount}");
+
+
+
                     //แสดงสมาชิกทั้งหมดในห้องสมุด
                     Console.WriteLine("\nMembers:");
                   
@@ -155,9 +162,7 @@ namespace library_system
                 }
                 else if (input == "5")
                 {
-                    // สมาชิกไม่ได้เอาหนังสือไป
-                    Console.WriteLine();
-                  //  member1.ReturnBook(book1);
+             
 
 
                     // สมาชิกยืมหนังสือ
@@ -166,7 +171,7 @@ namespace library_system
                     member2.BorrowBook(book2);
                     //สมาชิกคืนหนังสือ
                     Console.WriteLine();
-                  //  member1.ReturnBook(book1);
+                    member1.ReturnBook(book1);
 
                 }
                 else if (input == "6")

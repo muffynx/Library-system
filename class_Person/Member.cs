@@ -12,7 +12,7 @@ namespace library_system.class_Person
         private List<Book> borrowedBooks;
         public Member(string name, string id) : base(name, id)//Inheritance 
         {
-            borrowedBooks= new List<Book>();
+            borrowedBooks = new List<Book>();
         }
         public void BorrowBook(Book book)
         {
